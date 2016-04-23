@@ -1,0 +1,43 @@
+{
+    "name": "karlomikus/laravel-cakeorm",
+    "type": "library",
+    "description": "Laravel CakePHP ORM bridge",
+    "keywords": [
+        "laravel",
+        "cakephp",
+        "orm",
+        "database"
+    ],
+    "homepage": "https://github.com/karlomikus/laravel-cakeorm",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Karlo Mikus",
+            "email": "contact@karlomikus.com",
+            "homepage": "http://karlomikus.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~5.6",
+        "cakephp/orm": "^3.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Karlomikus\\LaravelCakeORM\\": "src/LaravelCakeORM"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
