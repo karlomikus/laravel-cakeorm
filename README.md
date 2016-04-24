@@ -2,6 +2,8 @@
 
 Use CakePHP ORM in your Laravel 5 projects
 
+Plase note that this package is still in development and not recommended for production use, but core of the usage works at the moment.
+
 ## Install
 
 Via Composer
@@ -59,6 +61,8 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ## TODO
 
+* Metadata caching configuration
+* Query logging
 * Multiple connections
 * Artisan create tables/entities
 * Support for laravel-debugbar
