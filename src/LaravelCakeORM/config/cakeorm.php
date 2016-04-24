@@ -4,19 +4,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application namespace
-    |--------------------------------------------------------------------------
-    |
-    | Default base namespace CakePHP should look in for
-    | tables and entities
-    |
-    | See: http://book.cakephp.org/3.0/en/orm/table-objects.html#configuring-the-namespace-to-locate-orm-classes
-    |
-    */
-    'app_namespace' => 'App\\',
-
-    /*
-    |--------------------------------------------------------------------------
     | Database
     |--------------------------------------------------------------------------
     |
@@ -29,7 +16,7 @@ return [
         'persistent' => false,
         'encoding' => 'utf8',
         'timezone' => 'UTC',
-        'cacheMetadata' => false
+        'cacheMetadata' => 'laravel-cakeorm'
     ],
 
     /*
@@ -59,10 +46,10 @@ return [
     */
 
     'metadata_cache' => [
-        'prefix' => 'cake_model',
-        'path' => storage_path('cakeorm'),
+        'className' => Karlomikus\LaravelCakeORM\Adapters\CacheAdapter::class,
+        'duration' => '2', // in minutes
         'serialize' => true,
-        'duration' => '+2 minutes'
+        'prefix' => 'laravel_cake_orm_'
     ],
 
 ];
