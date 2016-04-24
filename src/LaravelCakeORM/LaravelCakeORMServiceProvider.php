@@ -5,7 +5,6 @@ use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\Database\Type;
 use Illuminate\Support\ServiceProvider;
-use Karlomikus\LaravelCakeORM\Adapters\CacheAdapter;
 
 /**
  * Register CakeORM configuration
@@ -29,9 +28,6 @@ class LaravelCakeORMServiceProvider extends ServiceProvider
         // Configure CakePHPs default app namespace
         Configure::write('App.namespace', $this->app->getNamespace());
 
-        // Configure custom cache config
-        Cache::config('laravel-cakeorm', config('cakeorm.metadata_cache'));
-
         // Register our ORM manager
         $this->app->singleton('cake.orm', function ($app) {
             return new CakeORMManager($app);
@@ -48,6 +44,9 @@ class LaravelCakeORMServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Configure custom cache config
+        Cache::config('laravel-cakeorm', config('cakeorm.metadata_cache'));
+
         $this->publishes([
             __DIR__.'/config/cakeorm.php' => config_path('cakeorm.php'),
         ]);

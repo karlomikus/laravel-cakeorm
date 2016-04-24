@@ -28,7 +28,7 @@ $ php artisan vendor:publish --provider="Karlomikus\LaravelCakeORM\LaravelCakeOR
 
 ## Configuration
 
-Configuration for package is available in `config/cakeorm.php`, there you can change default application namespace and add additional db connection configuration.
+Configuration for package is available in `config/cakeorm.php`.
 
 You probably want to follow CakePHPs conventions for creating tables and entities, so your folder structure should look something like:
 
@@ -61,6 +61,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 * Multiple connections
 * Artisan create tables/entities
+* Support for laravel-debugbar
 
 ## Contributing
 
